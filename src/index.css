@@ -1,1 +1,55 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Apply 65-35 color ratio base */
+@layer base {
+  :root {
+    --primary: #0f172a;
+    --secondary: #f8fafc;
+  }
+
+  body {
+    background-color: var(--primary);
+    color: var(--secondary);
+  }
+}
+
+/* Custom component classes following 65-35 ratio */
+@layer components {
+  /* Primary dominant (65%) components */
+  .card-primary {
+    background-color: var(--primary);
+    border: 2px solid rgba(248,250,252,0.2);
+    @apply rounded-lg p-6 shadow-md;
+  }
+  
+  .btn-primary {
+    background-color: var(--secondary);
+    color: var(--primary);
+    @apply px-6 py-3 rounded-lg transition-colors font-semibold;
+  }
+  
+  .btn-secondary {
+    background-color: var(--primary);
+    color: var(--secondary);
+    border: 2px solid var(--secondary);
+    @apply px-6 py-3 rounded-lg transition-colors font-semibold;
+  }
+  
+  /* Header with proper ratio */
+  .header-balanced {
+    background-color: var(--primary);
+    border-bottom: 4px solid var(--secondary);
+  }
+  
+  /* Section with 65-35 visual balance */
+  .section-balanced {
+    background-color: var(--primary);
+  }
+  
+  .section-accent {
+    background-color: rgba(248,250,252,0.05);
+    border-left: 4px solid var(--secondary);
+  }
+}
