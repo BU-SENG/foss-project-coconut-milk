@@ -4,7 +4,7 @@ const Homepage = () => {
   console.log('Homepage Loaded')
   return (
     <div>
-      <h2 style={{ color: "red", fontSize: "40px" }}>We are coconut milk</h2>
+      <h2 className='text-red-400 text-4xl'>We are coconut milk</h2>
     </div>
   )
 }
