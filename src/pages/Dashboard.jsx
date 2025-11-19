@@ -94,7 +94,7 @@ export default function Dashboard() {
           </button>
         </div>
 
-        {/* Main Content Grid */}
+        
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Left Column - Skills */}
           <div className="lg:col-span-2 space-y-8">
