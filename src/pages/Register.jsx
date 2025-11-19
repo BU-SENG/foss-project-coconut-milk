@@ -75,7 +75,7 @@ export default function AuthPage() {
   return (
     <div className="min-h-screen bg-linear-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-4">
       <div className="bg-white rounded-2xl shadow-xl w-full max-w-md p-8">
-        {/* Logo */}
+
         <div className="flex items-center justify-center space-x-2 mb-8">
           <BookOpen className="h-10 w-10 text-indigo-600" />
           <Link to='/'>
@@ -83,7 +83,6 @@ export default function AuthPage() {
           </Link>
         </div>
 
-        {/* Toggle Buttons */}
         <div className="flex bg-gray-100 rounded-lg p-1 mb-8">
           <button
             onClick={() => setIsLogin(true)}
@@ -107,7 +106,6 @@ export default function AuthPage() {
           </button>
         </div>
 
-        {/* Form */}
         <form onSubmit={handleSubmit} className="space-y-6">
           {!isLogin && (
             <div>
@@ -203,7 +201,6 @@ export default function AuthPage() {
 
         {toast && <Toast message={toast.message} type={toast.type} onClose={hideToast} />}
 
-        {/* Divider */}
         <div className="mt-6 text-center text-sm text-gray-600">
           {isLogin ? "Don't have an account?" : "Already have an account?"}{' '}
           <button
