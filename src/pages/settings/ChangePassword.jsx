@@ -11,6 +11,7 @@ const initialFormState = {
   confirmPassword: ''
 };
 
+// Function for changing password page
 export default function ChangePasswordPage() {
   const navigate = useNavigate();
   const [user, setUser] = useState(() => getCurrentUser());
