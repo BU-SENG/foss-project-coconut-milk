@@ -230,7 +230,7 @@ export default function ProfilePage() {
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8">
-          {/* Main Info */}
+         
           <div className="lg:col-span-2 space-y-8">
             {/* About Section */}
             <div className="bg-white rounded-xl shadow-sm p-6">
