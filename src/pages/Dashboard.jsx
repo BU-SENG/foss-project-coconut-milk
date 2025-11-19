@@ -243,7 +243,7 @@ export default function Dashboard() {
               <h3 className="text-3xl font-bold bg-gradient-to-r from-gray-900 to-indigo-900 bg-clip-text text-transparent">
                 Session Inspiration
               </h3>
-              <p className="text-gray-600 mt-2 text-lg">Fresh energy for your next live class.</p>
+              <p className="text-gray-600 font-semibold mt-2 text-lg">Fresh energy for your next live class.</p>
             </div>
             <button
               className="mt-4 md:mt-0 px-6 py-3 rounded-full border-2 border-indigo-300 text-indigo-700 font-semibold hover:bg-indigo-50 hover:border-indigo-400 hover:shadow-lg transition-all duration-300 hover:scale-105 active:scale-95"

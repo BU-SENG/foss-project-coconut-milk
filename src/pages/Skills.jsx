@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { BookOpen, Search, Filter, Star, User } from 'lucide-react';
+import { BookOpen, Search, Filter, Star, User, ChevronDown } from 'lucide-react';
 import Toast from '../components/Toast';
 import { useToast } from '../hooks/useToast';
 
@@ -145,53 +145,63 @@ export default function BrowseSkills() {
 
   return (
     <>
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-indigo-50/30 to-purple-50/50">
       {/* Header */}
-      <header className="bg-white shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-          <div className="flex items-center space-x-2">
-            <BookOpen className="h-8 w-8 text-indigo-600" />
-            <h1 className="text-2xl font-bold text-gray-900">Skill Exchange Hub</h1>
+      <header className="bg-gradient-to-r from-purple-600 via-indigo-600 to-purple-600 text-white shadow-xl backdrop-blur-sm border-b border-white/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex justify-between items-center">
+          <div className="flex items-center space-x-4">
+            <div className="p-2 bg-white/10 rounded-xl backdrop-blur-sm">
+              <BookOpen className="h-8 w-8 text-white" />
+            </div>
+            <h1 className="text-2xl font-bold cursor-pointer hover:text-purple-100 transition-colors" onClick={() => Navigate('/dashboard')}>
+              Skill Exchange Hub
+            </h1>
           </div>
-          <button className="text-gray-700 hover:text-indigo-600 font-medium" onClick={() => {Navigate('/dashboard')}}>
+          {/* <button 
+            className="px-5 py-2.5 rounded-xl text-white hover:bg-white/10 font-semibold transition-all duration-300 hover:scale-105 active:scale-95 border border-white/20 hover:border-white/30" 
+            onClick={() => {Navigate('/dashboard')}}
+          >
             Back to Dashboard
-          </button>
+          </button> */}
         </div>
       </header>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         {/* Page Title */}
-        <div className="mb-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-2">Browse Skills</h2>
-          <p className="text-gray-600">Discover and learn from our community</p>
+        <div className="mb-10">
+          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-900 via-indigo-900 to-purple-900 bg-clip-text text-transparent mb-3">
+            Browse Skills
+          </h2>
+          <p className="text-gray-600 text-lg font-medium">Discover and learn from our community</p>
         </div>
 
         {/* Search and Filters */}
-        <div className="bg-white rounded-xl shadow-sm p-6 mb-8">
-          <div className="flex flex-col md:flex-row gap-4">
+        <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl p-7 md:p-8 mb-8 border border-indigo-100/50 hover:shadow-2xl transition-all duration-300">
+          <div className="flex flex-col md:flex-row gap-5">
             {/* Search Bar */}
             <div className="flex-1 relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-indigo-400" />
               <input
                 type="text"
                 placeholder="Search skills or instructors..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none"
+                className="w-full pl-12 pr-4 py-3.5 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all duration-300 bg-white/50 hover:bg-white hover:border-indigo-300 font-medium"
               />
             </div>
 
             {/* Category Filter */}
             <div className="md:w-64">
-              <div className="relative">
-                <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
+              <div className="relative group">
+                <Filter className="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-indigo-400 z-10 pointer-events-none" />
+                <ChevronDown className="absolute right-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-indigo-400 z-10 pointer-events-none transition-transform duration-300 group-hover:text-indigo-600 group-focus-within:rotate-180" />
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none appearance-none bg-white"
+                  className="w-full pl-12 pr-12 py-3.5 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none appearance-none bg-white/50 hover:bg-white hover:border-indigo-300 transition-all duration-300 font-medium cursor-pointer shadow-sm hover:shadow-md focus:shadow-lg"
                 >
                   {categories.map(cat => (
-                    <option key={cat} value={cat.toLowerCase()}>
+                    <option key={cat} value={cat.toLowerCase()} className="py-2">
                       {cat}
                     </option>
                   ))}
@@ -202,9 +212,9 @@ export default function BrowseSkills() {
         </div>
 
         {/* Results Count */}
-        <div className="mb-4">
-          <p className="text-gray-600">
-            Showing <span className="font-semibold">{filteredSkills.length}</span> skills
+        <div className="mb-6">
+          <p className="text-gray-700 font-semibold text-lg">
+            Showing <span className="text-indigo-600 font-bold">{filteredSkills.length}</span> {filteredSkills.length === 1 ? 'skill' : 'skills'}
           </p>
         </div>
 
@@ -213,22 +223,22 @@ export default function BrowseSkills() {
           {filteredSkills.map(skill => (
             <div
               key={skill.id}
-              className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow p-6"
+              className="group bg-white/80 backdrop-blur-sm rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 p-6 border border-indigo-100/50 hover:border-indigo-300 hover:scale-[1.02] active:scale-100"
             >
-              <div className="flex items-start justify-between mb-4">
-                <span className="text-xs font-medium px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full">
+              <div className="flex items-start justify-between mb-5">
+                <span className="text-xs font-bold px-4 py-1.5 bg-gradient-to-r from-indigo-100 to-purple-100 text-indigo-700 rounded-full border border-indigo-200/50">
                   {skill.category}
                 </span>
-                <div className="flex items-center space-x-2">
-                  <div className="flex items-center space-x-1">
-                    <Star className="h-4 w-4 text-yellow-400 fill-current" />
-                    <span className="text-sm font-semibold">{skill.rating}</span>
+                <div className="flex items-center space-x-3">
+                  <div className="flex items-center space-x-1.5 bg-yellow-50 px-2.5 py-1 rounded-full border border-yellow-200/50">
+                    <Star className="h-4 w-4 text-yellow-500 fill-current" />
+                    <span className="text-sm font-bold text-gray-900">{skill.rating}</span>
                     <span className="text-xs text-gray-500">({skill.reviews})</span>
                   </div>
                   {skill.isCustom && (
                     <button
                       onClick={() => handleDeleteSkill(skill)}
-                      className="text-xs text-red-600 hover:text-red-700"
+                      className="text-xs text-red-600 hover:text-red-700 font-semibold hover:bg-red-50 px-2 py-1 rounded-lg transition-colors"
                     >
                       Delete
                     </button>
@@ -236,20 +246,22 @@ export default function BrowseSkills() {
                 </div>
               </div>
 
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">{skill.title}</h3>
-              <p className="text-sm text-gray-600 mb-4">{skill.description}</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-indigo-700 transition-colors leading-tight">
+                {skill.title}
+              </h3>
+              <p className="text-sm text-gray-600 mb-5 leading-relaxed line-clamp-2">{skill.description}</p>
 
-              <div className="flex items-center space-x-2 mb-4">
-                <div className="h-8 w-8 bg-indigo-100 rounded-full flex items-center justify-center">
-                  <User className="h-4 w-4 text-indigo-600" />
+              <div className="flex items-center space-x-3 mb-5 p-3 bg-gradient-to-r from-indigo-50/50 to-purple-50/50 rounded-xl border border-indigo-100/50">
+                <div className="h-10 w-10 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-full flex items-center justify-center shadow-md">
+                  <User className="h-5 w-5 text-white" />
                 </div>
                 <div>
-                  <p className="text-sm font-medium text-gray-900">{skill.instructor}</p>
-                  <p className="text-xs text-gray-500">{skill.enrolled} students</p>
+                  <p className="text-sm font-bold text-gray-900">{skill.instructor}</p>
+                  <p className="text-xs text-gray-600 font-medium">{skill.enrolled} students enrolled</p>
                 </div>
               </div>
 
-              <button className="w-full bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700 font-medium transition-colors">
+              <button className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-3 rounded-xl hover:from-indigo-700 hover:to-purple-700 font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 active:scale-95">
                 View Details
               </button>
             </div>
@@ -258,17 +270,23 @@ export default function BrowseSkills() {
 
         {/* Empty State */}
         {filteredSkills.length === 0 && (
-          <div className="text-center py-12">
-            <p className="text-gray-500 text-lg">No skills found matching your criteria</p>
-            <button
-              onClick={() => {
-                setSearchQuery('');
-                setSelectedCategory('all');
-              }}
-              className="mt-4 text-indigo-600 hover:text-indigo-700 font-medium"
-            >
-              Clear filters
-            </button>
+          <div className="text-center py-16 bg-white/60 backdrop-blur-sm rounded-3xl shadow-xl border border-indigo-100/50">
+            <div className="max-w-md mx-auto">
+              <div className="mb-6 inline-flex p-4 bg-gradient-to-br from-indigo-100 to-purple-100 rounded-full">
+                <Search className="h-8 w-8 text-indigo-600" />
+              </div>
+              <p className="text-gray-700 text-xl font-semibold mb-2">No skills found</p>
+              <p className="text-gray-500 mb-6">Try adjusting your search or filter criteria</p>
+              <button
+                onClick={() => {
+                  setSearchQuery('');
+                  setSelectedCategory('all');
+                }}
+                className="px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-xl hover:from-indigo-700 hover:to-purple-700 font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 active:scale-95"
+              >
+                Clear filters
+              </button>
+            </div>
           </div>
         )}
       </div>
