@@ -5,6 +5,7 @@ import { AlertTriangle, Trash2 } from 'lucide-react';
 import { deleteCurrentUser, getCurrentUser } from '../../utils/userStorage';
 import { SettingsFallback, SettingsHeader } from './SettingsLayout';
 
+// Function for deleting account page
 export default function DeleteAccountPage() {
   const navigate = useNavigate();
   const [user, setUser] = useState(() => getCurrentUser());
