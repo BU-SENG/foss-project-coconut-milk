@@ -88,7 +88,7 @@ export default function ProfilePage() {
       window.removeEventListener('user-deleted', handleUserEvent);
       window.removeEventListener('storage', handleUserEvent);
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+
   }, []);
 
   const handleSave = () => {
@@ -154,7 +154,6 @@ export default function ProfilePage() {
   return (
     <>
     <div className="min-h-screen bg-gray-50">
-      {/* Header */}
       <header className="bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
           <div className="flex items-center space-x-2">
@@ -168,7 +167,6 @@ export default function ProfilePage() {
       </header>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Profile Header */}
         <div className="bg-white rounded-xl shadow-sm p-8 mb-8">
           <div className="flex items-start justify-between mb-6">
             <div className="flex items-center space-x-6">
@@ -208,7 +206,6 @@ export default function ProfilePage() {
             </button>
           </div>
 
-          {/* Stats Grid */}
           <div className="grid grid-cols-4 gap-4 py-6 border-t border-gray-200">
             <div className="text-center">
               <div className="text-3xl font-bold text-indigo-600 mb-1">{stats.skillsTaught}</div>
@@ -230,9 +227,7 @@ export default function ProfilePage() {
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8">
-          {/* Main Info */}
           <div className="lg:col-span-2 space-y-8">
-            {/* About Section */}
             <div className="bg-white rounded-xl shadow-sm p-6">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">About</h3>
               {isEditing ? (
@@ -285,7 +280,6 @@ export default function ProfilePage() {
               )}
             </div>
 
-            {/* Skills Teaching */}
             <div className="bg-white rounded-xl shadow-sm p-6">
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-xl font-semibold text-gray-900">Skills Teaching</h3>
@@ -308,7 +302,6 @@ export default function ProfilePage() {
               </div>
             </div>
 
-            {/* Skills Learning */}
             <div className="bg-white rounded-xl shadow-sm p-6">
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-xl font-semibold text-gray-900">Skills Learning</h3>
@@ -329,7 +322,6 @@ export default function ProfilePage() {
             </div>
           </div>
 
-          {/* Sidebar - Contact Info */}
           <div className="space-y-6">
             <div className="bg-white rounded-xl shadow-sm p-6">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Contact Information</h3>
@@ -384,7 +376,6 @@ export default function ProfilePage() {
               )}
             </div>
 
-            {/* Account Settings */}
             <div className="bg-white rounded-xl shadow-sm p-6">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Account Settings</h3>
               <div className="space-y-3">
