@@ -1,16 +1,47 @@
-# React + Vite
+# Skill Exchange Hub
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**A platform for connecting people to share and exchange skills.**
 
-Currently, two official plugins are available:
+## 🌟 Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Skill Exchange Hub is an open-source platform designed to facilitate peer-to-peer skill sharing. Our goal is to create a community where users can teach what they know and learn what they need, fostering a cooperative learning environment without monetary exchange.
 
-## React Compiler
+## 🚀 Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Follow these steps to set up and run the project on your local machine.
 
-## Expanding the ESLint configuration
+### Prerequisites
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* Node.js, git, Github, vite
+
+### Installation
+
+1. **Clone the repository:**
+
+    ```bash
+    git clone [https://github.com/](BU-SENG/foss-project-coconut-milk)
+    cd foss-project-coconut-milk
+    ```
+
+2. **Install dependencies:**
+
+    ```bash
+    npm install
+    ```
+
+3. **Configuration:**
+    * Create a `.env` file based on `.env.example` and fill in necessary configuration variables.
+4. **Run the application:**
+
+    ```bash
+    # Example command to start the server
+    npm run dev
+    ```
+
+## 🛠️ Contributing
+
+We welcome contributions! Please see our [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on how to submit issues, features, and pull requests.
+
+## ⚖️ License
+
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
