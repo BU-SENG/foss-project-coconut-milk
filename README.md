@@ -12,7 +12,7 @@ Follow these steps to set up and run the project on your local machine.
 
 ### Prerequisites
 
-* Node.js, git, Github, vite
+* Node.js, git, Github, react.js
 
 ### Installation
 
