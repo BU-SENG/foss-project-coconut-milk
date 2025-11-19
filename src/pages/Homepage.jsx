@@ -37,7 +37,7 @@ const testimonials = [
   },
   {
     quote:
-      'I swapped guitar lessons for advanced Python coaching. Bartering knowledge saved me thousands of dollars this year.',
+      'I swapped guitar lessons for advanced Python coaching. Bartering knowledge saved me thousands of dollars this year and i love that for myself.',
     name: 'Emily Chen',
     role: 'Data Scientist'
   }
