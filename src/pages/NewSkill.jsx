@@ -117,7 +117,7 @@ export default function PostSkillPage() {
           <span>Back to Dashboard</span>
         </button>
 
-        {/* Page Title */}
+        
         <div className="mb-8">
           <h2 className="text-3xl font-bold text-gray-900 mb-2">Post a New Skill</h2>
           <p className="text-gray-600">Share your expertise with the community</p>
