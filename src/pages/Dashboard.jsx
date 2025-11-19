@@ -121,7 +121,7 @@ export default function Dashboard() {
               </div>
             </div>
 
-            {/* Learning Skills */}
+           
             <div className="bg-white rounded-2xl shadow-lg p-6 border border-indigo-50">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Skills You&apos;re Learning</h3>
               <div className="space-y-4">
