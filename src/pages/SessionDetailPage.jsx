@@ -73,9 +73,7 @@ const SessionDetailPage = () => {
     <DashboardLayout>
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-3 gap-8">
-          {/* Main Content */}
           <div className="lg:col-span-2">
-            {/* Session Header */}
             <Card variant="primary" className="mb-6">
               <div className="flex items-start gap-6 mb-6">
                 <div className="w-24 h-24 rounded-xl bg-secondary/10 flex items-center justify-center flex-shrink-0">
@@ -106,7 +104,6 @@ const SessionDetailPage = () => {
               </div>
             </Card>
 
-            {/* What You'll Learn */}
             <Card variant="primary" className="mb-6">
               <h2 className="text-xl font-bold text-secondary mb-4">What You'll Learn</h2>
               <ul className="space-y-3">
@@ -119,7 +116,6 @@ const SessionDetailPage = () => {
               </ul>
             </Card>
 
-            {/* Materials Needed */}
             <Card variant="primary" className="mb-6">
               <h2 className="text-xl font-bold text-secondary mb-4">What to Bring</h2>
               <ul className="space-y-2">
@@ -132,13 +128,11 @@ const SessionDetailPage = () => {
               </ul>
             </Card>
 
-            {/* Prerequisites */}
             <Card variant="accent" className="mb-6">
               <h2 className="text-xl font-bold text-secondary mb-3">Prerequisites</h2>
               <p className="text-secondary/80">{session.prerequisites}</p>
             </Card>
 
-            {/* Reviews */}
             <div>
               <h2 className="text-2xl font-bold text-secondary mb-4">
                 Student Reviews ({reviews.length})
@@ -151,9 +145,7 @@ const SessionDetailPage = () => {
             </div>
           </div>
 
-          {/* Sidebar */}
           <div className="space-y-6">
-            {/* Booking Card */}
             <Card variant="primary" className="sticky top-6">
               <div className="text-center mb-6">
                 <div className="text-4xl font-bold text-secondary mb-2">
@@ -191,7 +183,6 @@ const SessionDetailPage = () => {
               </div>
             </Card>
 
-            {/* Instructor Card */}
             <Card variant="primary">
               <h3 className="text-lg font-bold text-secondary mb-4">Your Instructor</h3>
               
@@ -220,7 +211,6 @@ const SessionDetailPage = () => {
               </Link>
             </Card>
 
-            {/* Share Card */}
             <Card variant="accent">
               <h3 className="text-lg font-bold text-secondary mb-3">Share This Session</h3>
               <div className="flex gap-2">

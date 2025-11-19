@@ -146,7 +146,6 @@ export default function BrowseSkills() {
   return (
     <>
     <div className="min-h-screen bg-gray-50">
-      {/* Header */}
       <header className="bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
           <div className="flex items-center space-x-2">
@@ -160,16 +159,13 @@ export default function BrowseSkills() {
       </header>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Page Title */}
         <div className="mb-8">
           <h2 className="text-3xl font-bold text-gray-900 mb-2">Browse Skills</h2>
           <p className="text-gray-600">Discover and learn from our community</p>
         </div>
 
-        {/* Search and Filters */}
         <div className="bg-white rounded-xl shadow-sm p-6 mb-8">
           <div className="flex flex-col md:flex-row gap-4">
-            {/* Search Bar */}
             <div className="flex-1 relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
               <input
@@ -181,7 +177,6 @@ export default function BrowseSkills() {
               />
             </div>
 
-            {/* Category Filter */}
             <div className="md:w-64">
               <div className="relative">
                 <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
@@ -201,14 +196,12 @@ export default function BrowseSkills() {
           </div>
         </div>
 
-        {/* Results Count */}
         <div className="mb-4">
           <p className="text-gray-600">
             Showing <span className="font-semibold">{filteredSkills.length}</span> skills
           </p>
         </div>
 
-        {/* Skills Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredSkills.map(skill => (
             <div
@@ -256,7 +249,6 @@ export default function BrowseSkills() {
           ))}
         </div>
 
-        {/* Empty State */}
         {filteredSkills.length === 0 && (
           <div className="text-center py-12">
             <p className="text-gray-500 text-lg">No skills found matching your criteria</p>
