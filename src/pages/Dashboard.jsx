@@ -34,7 +34,7 @@ export default function Dashboard() {
 
   return (
     <div className="min-h-screen bg-linear-to-br from-slate-50 via-indigo-50 to-purple-50">
-      {/* Header */}
+     
       <header className="bg-purple-600 text-white shadow-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
           <div className="flex items-center space-x-3">
@@ -72,7 +72,7 @@ export default function Dashboard() {
             </div>
           </div>
 
-        {/* Quick Actions */}
+       
         <div className="flex flex-wrap gap-4">
           <button
             className="bg-purple-600 text-white px-6 py-3 rounded-xl hover:opacity-90 font-medium inline-flex items-center space-x-2 shadow-lg"
