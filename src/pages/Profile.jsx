@@ -328,7 +328,7 @@ export default function ProfilePage() {
             </div>
           </div>
 
-          {/* Sidebar - Contact Info */}
+        
           <div className="space-y-6">
             <div className="bg-white rounded-xl shadow-sm p-6">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Contact Information</h3>
