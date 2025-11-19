@@ -1,9 +1,15 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { BookOpen, Mail, Lock, User } from 'lucide-react';
+import { addDefaultPreferences, getStoredUsers, saveUsers, setCurrentUserId } from '../utils/userStorage';
+import Toast from '../components/Toast';
+import { useToast } from '../hooks/useToast';
 
 export default function AuthPage() {
+  const navigate = useNavigate();
   const [isLogin, setIsLogin] = useState(true);
+  const [users, setUsers] = useState(() => getStoredUsers());
+  const { toast, showToast, hideToast } = useToast();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -11,10 +17,52 @@ export default function AuthPage() {
     bio: ''
   });
 
+  useEffect(() => {
+    saveUsers(users);
+  }, [users]);
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Handle authentication logic here
+    const email = formData.email.trim().toLowerCase();
+
+    if (isLogin) {
+      const existingUser = users.find((user) => user.email === email);
+      if (!existingUser) {
+        showToast({ message: 'No account found for that email. Please sign up first.', type: 'error' });
+        return;
+      }
+      if (existingUser.password !== formData.password) {
+        showToast({ message: 'Incorrect password. Please try again.', type: 'error' });
+        return;
+      }
+      showToast({ message: 'Welcome back! Taking you to the dashboard...', type: 'success', duration: 2000 });
+      setCurrentUserId(existingUser.id);
+      setTimeout(() => navigate('/dashboard'), 800);
+      return;
+    }
+
+    if (users.some((user) => user.email === email)) {
+      showToast({ message: 'Email already registered. Please login instead.', type: 'error' });
+      return;
+    }
+
+    const newUser = addDefaultPreferences({
+      id: crypto.randomUUID(),
+      name: formData.name.trim(),
+      email,
+      password: formData.password,
+      bio: formData.bio
+    });
+
+    setUsers((prev) => [...prev, newUser]);
+    showToast({ message: 'Account created! Please login with your new credentials.', type: 'success' });
+    setIsLogin(true);
+    setFormData({
+      name: '',
+      email: '',
+      password: '',
+      bio: ''
+    });
   };
 
   const handleChange = (e) => {
@@ -25,7 +73,7 @@ export default function AuthPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-linear-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-4">
       <div className="bg-white rounded-2xl shadow-xl w-full max-w-md p-8">
         {/* Logo */}
         <div className="flex items-center justify-center space-x-2 mb-8">
@@ -152,6 +200,8 @@ export default function AuthPage() {
             {isLogin ? 'Login' : 'Create Account'}
           </button>
         </form>
+
+        {toast && <Toast message={toast.message} type={toast.type} onClose={hideToast} />}
 
         {/* Divider */}
         <div className="mt-6 text-center text-sm text-gray-600">
