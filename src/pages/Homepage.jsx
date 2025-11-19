@@ -47,7 +47,7 @@ export default function LandingPage() {
   const Navigate = useNavigate();
   return (
     <div className="min-h-screen bg-linear-to-br from-blue-50 via-indigo-50 to-purple-100">
-      {/* Header */}
+      
       <header className="bg-white/90 backdrop-blur border-b border-indigo-100 sticky top-0 z-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
           <div className="flex items-center space-x-2">
@@ -65,7 +65,7 @@ export default function LandingPage() {
         </div>
       </header>
 
-      {/* Hero Section */}
+      
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 grid lg:grid-cols-2 gap-12 items-center">
         <div>
           <p className="text-indigo-600 font-semibold uppercase tracking-wide mb-4">A community-first learning hub</p>
@@ -116,7 +116,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* How It Works */}
+      
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <h3 className="text-3xl font-bold text-center text-gray-900 mb-12">How It Works</h3>
         <div className="grid md:grid-cols-3 gap-8">
@@ -144,7 +144,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Community Stories */}
+      
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 grid lg:grid-cols-2 gap-12 items-center">
         <div className="rounded-4xl overflow-hidden shadow-2xl border border-white/70">
           <img
@@ -180,7 +180,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Testimonials */}
+      
       <section className="bg-indigo-700 py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
           <p className="text-indigo-200 uppercase tracking-wider text-sm mb-4 text-center">Loved by creators</p>
@@ -199,7 +199,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Stats */}
+      
       <section className="bg-linear-to-r from-indigo-600 to-purple-600 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-8 text-center text-white">
@@ -211,7 +211,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Call to action */}
+      
       <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="bg-white rounded-3xl shadow-2xl p-10 md:p-14 text-center border border-indigo-50">
           <p className="text-indigo-600 font-semibold uppercase tracking-wide mb-4">Ready when you are</p>
@@ -231,7 +231,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Footer */}
+      
       <footer className="bg-white py-10 mt-10 border-t border-indigo-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-600">
           <p>&copy; {new Date().getFullYear()} Skill Exchange Hub. All rights reserved.</p>
