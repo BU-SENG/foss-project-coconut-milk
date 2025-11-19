@@ -1,0 +1,227 @@
+{
+  "users": [
+    {
+      "id": "usr_john",
+      "name": "John Doe",
+      "email": "john@example.com",
+      "passwordHash": "$2a$10$CwTycUXWue0Thq9StjUM0uJ8aLuG0u7dBDEuAbSUeYEYV3glV6ePe",
+      "bio": "Passionate about learning and teaching. Love technology, music, and languages. Always excited to share knowledge with others!",
+      "interests": "Web Development, Guitar, Spanish",
+      "phone": "+1 234 567 8900",
+      "location": "San Francisco, CA",
+      "teachingSkillIds": [
+        "skill-react",
+        "skill-guitar"
+      ],
+      "learningSkillIds": [
+        "skill-spanish",
+        "skill-photo"
+      ],
+      "createdAt": "2025-01-10T10:00:00.000Z"
+    },
+    {
+      "id": "usr_sarah",
+      "name": "Sarah Johnson",
+      "email": "sarah@example.com",
+      "passwordHash": "$2a$10$CwTycUXWue0Thq9StjUM0uJ8aLuG0u7dBDEuAbSUeYEYV3glV6ePe",
+      "bio": "Full-stack developer and avid learner.",
+      "interests": "React, Photography",
+      "phone": "+1 555 234 5678",
+      "location": "Austin, TX",
+      "teachingSkillIds": [
+        "skill-python"
+      ],
+      "learningSkillIds": [
+        "skill-react"
+      ],
+      "createdAt": "2025-02-01T08:30:00.000Z"
+    },
+    {
+      "id": "usr_maria",
+      "name": "Maria Garcia",
+      "email": "maria@example.com",
+      "passwordHash": "$2a$10$CwTycUXWue0Thq9StjUM0uJ8aLuG0u7dBDEuAbSUeYEYV3glV6ePe",
+      "bio": "Language enthusiast helping people become confident speakers.",
+      "interests": "Languages, Travel",
+      "phone": "+34 600 123 456",
+      "location": "Madrid, Spain",
+      "teachingSkillIds": [
+        "skill-spanish"
+      ],
+      "learningSkillIds": [
+        "skill-guitar"
+      ],
+      "createdAt": "2025-02-15T15:45:00.000Z"
+    }
+  ],
+  "skills": [
+    {
+      "id": "skill-react",
+      "title": "React Development Fundamentals",
+      "category": "Technology",
+      "description": "Learn React from scratch with hands-on projects covering components, hooks, state management, and API integration.",
+      "duration": "4 weeks",
+      "format": "Online via Video Call",
+      "schedule": "Tuesdays & Thursdays, 6:00 PM - 8:00 PM",
+      "prerequisites": [
+        "Basic JavaScript knowledge"
+      ],
+      "learningOutcomes": [
+        "Build reusable React components",
+        "Manage application state with hooks",
+        "Connect React apps to REST APIs"
+      ],
+      "instructorId": "usr_john",
+      "rating": 4.8,
+      "reviews": 12,
+      "enrolledUserIds": [
+        "usr_sarah"
+      ],
+      "createdAt": "2025-01-12T10:00:00.000Z"
+    },
+    {
+      "id": "skill-guitar",
+      "title": "Guitar for Beginners",
+      "category": "Music",
+      "description": "Start your musical journey with basic chords, strumming patterns, and your first songs.",
+      "duration": "6 weeks",
+      "format": "Hybrid (Online & In-Person)",
+      "schedule": "Saturdays, 10:00 AM - 12:00 PM",
+      "prerequisites": [
+        "Owns or can borrow a guitar"
+      ],
+      "learningOutcomes": [
+        "Play common open chords",
+        "Strum confidently in 4/4 and 3/4",
+        "Perform two full songs"
+      ],
+      "instructorId": "usr_john",
+      "rating": 4.9,
+      "reviews": 15,
+      "enrolledUserIds": [
+        "usr_maria"
+      ],
+      "createdAt": "2025-01-20T09:15:00.000Z"
+    },
+    {
+      "id": "skill-spanish",
+      "title": "Spanish Conversation Practice",
+      "category": "Languages",
+      "description": "Improve your Spanish through real conversations, pronunciation drills, and cultural insights.",
+      "duration": "8 weeks",
+      "format": "Online via Video Call",
+      "schedule": "Mondays & Wednesdays, 7:00 PM - 8:30 PM",
+      "prerequisites": [
+        "Basic Spanish vocabulary"
+      ],
+      "learningOutcomes": [
+        "Hold 10-minute conversations confidently",
+        "Use common idioms and expressions",
+        "Improve pronunciation and listening"
+      ],
+      "instructorId": "usr_maria",
+      "rating": 5.0,
+      "reviews": 8,
+      "enrolledUserIds": [
+        "usr_john"
+      ],
+      "createdAt": "2025-02-18T11:45:00.000Z"
+    },
+    {
+      "id": "skill-photo",
+      "title": "Digital Photography Basics",
+      "category": "Arts",
+      "description": "Master your camera and composition techniques with guided assignments.",
+      "duration": "3 weeks",
+      "format": "In-Person",
+      "schedule": "Fridays, 5:00 PM - 7:00 PM",
+      "prerequisites": [
+        "Owns DSLR or mirrorless camera"
+      ],
+      "learningOutcomes": [
+        "Shoot in manual mode",
+        "Compose eye-catching photos",
+        "Edit using Lightroom basics"
+      ],
+      "instructorId": "usr_sarah",
+      "rating": 4.5,
+      "reviews": 20,
+      "enrolledUserIds": [
+        "usr_john"
+      ],
+      "createdAt": "2025-02-05T13:20:00.000Z"
+    },
+    {
+      "id": "skill-python",
+      "title": "Python Programming Essentials",
+      "category": "Technology",
+      "description": "Introduction to Python for complete beginners focusing on scripts and automation.",
+      "duration": "5 weeks",
+      "format": "Self-Paced",
+      "schedule": "Access lessons anytime, live office hours on Sundays",
+      "prerequisites": [
+        "Basic computer literacy"
+      ],
+      "learningOutcomes": [
+        "Understand Python syntax",
+        "Work with data structures",
+        "Automate tasks with scripts"
+      ],
+      "instructorId": "usr_sarah",
+      "rating": 4.7,
+      "reviews": 18,
+      "enrolledUserIds": [],
+      "createdAt": "2025-02-10T16:00:00.000Z"
+    }
+  ],
+  "sessions": [
+    {
+      "id": "sess1",
+      "skillId": "skill-react",
+      "type": "teaching",
+      "hostId": "usr_john",
+      "participantIds": [
+        "usr_sarah"
+      ],
+      "startTime": "2025-11-20T14:00:00.000Z"
+    },
+    {
+      "id": "sess2",
+      "skillId": "skill-spanish",
+      "type": "learning",
+      "hostId": "usr_maria",
+      "participantIds": [
+        "usr_john"
+      ],
+      "startTime": "2025-11-21T16:00:00.000Z"
+    },
+    {
+      "id": "sess3",
+      "skillId": "skill-guitar",
+      "type": "teaching",
+      "hostId": "usr_john",
+      "participantIds": [
+        "usr_maria"
+      ],
+      "startTime": "2025-11-22T10:00:00.000Z"
+    }
+  ],
+  "activity": [
+    {
+      "id": "act1",
+      "text": "Sarah Johnson enrolled in React Development",
+      "time": "2025-11-18T10:00:00.000Z"
+    },
+    {
+      "id": "act2",
+      "text": "You completed Spanish Conversation session",
+      "time": "2025-11-18T12:30:00.000Z"
+    },
+    {
+      "id": "act3",
+      "text": "New review on Guitar Basics (5 stars)",
+      "time": "2025-11-17T09:15:00.000Z"
+    }
+  ]
+}
+
