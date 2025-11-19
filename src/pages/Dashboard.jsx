@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { BookOpen, Plus, Calendar, Bell, User, LogOut, Sparkles, Zap, Palette } from 'lucide-react';
+import { getCurrentUserId } from '../utils/userStorage';
 
 const inspirationImages = [
   'https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=900&q=80',
@@ -40,7 +41,19 @@ export default function Dashboard() {
           <div className="flex items-center space-x-3">
             <BookOpen className="h-9 w-9 text-white" />
             <div>
-              <h1 className="text-2xl font-bold">Skill Exchange Hub</h1>
+              <h1 
+                className="text-2xl font-bold cursor-pointer hover:text-purple-200 transition-colors"
+                onClick={() => {
+                  const userId = getCurrentUserId();
+                  if (userId) {
+                    Navigate('/dashboard');
+                  } else {
+                    Navigate('/');
+                  }
+                }}
+              >
+                Skill Exchange Hub
+              </h1>
               <p className="text-sm text-white/80">Curate. Teach. Learn.</p>
             </div>
           </div>

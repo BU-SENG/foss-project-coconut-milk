@@ -159,11 +159,11 @@ export default function ProfilePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
           <div className="flex items-center space-x-2">
             <BookOpen className="h-8 w-8 text-indigo-600" />
-            <h1 className="text-2xl font-bold text-gray-900">Skill Exchange Hub</h1>
+            <h1 className="text-2xl font-bold cursor-pointer hover:text-purple-200 transition-colors" onClick={() => Navigate('/dashboard')} >Skill Exchange Hub</h1>
           </div>
-          <button className="text-gray-700 hover:text-indigo-600 font-medium" onClick={() => Navigate('/dashboard')}>
+          {/* <button className="text-gray-700 hover:text-indigo-600 font-medium" onClick={() => Navigate('/dashboard')}>
             Back to Dashboard
-          </button>
+          </button> */}
         </div>
       </header>
 
