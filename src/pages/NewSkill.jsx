@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { BookOpen, ArrowLeft, Save } from 'lucide-react';
+import Toast from '../components/Toast';
+import { useToast } from '../hooks/useToast';
 
 export default function PostSkillPage() {
     const Navigate = useNavigate()
-  const [formData, setFormData] = useState({
+  const CUSTOM_SKILLS_KEY = 'skill-exchange-custom-skills';
+  const initialFormState = {
     title: '',
     category: '',
     description: '',
@@ -13,7 +16,9 @@ export default function PostSkillPage() {
     schedule: '',
     prerequisites: '',
     learningOutcomes: ''
-  });
+  };
+  const [formData, setFormData] = useState(initialFormState);
+  const { toast, showToast, hideToast } = useToast();
 
   const categories = [
     'Technology',
@@ -36,9 +41,55 @@ export default function PostSkillPage() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const parseMultilineField = (value) => {
+    return value
+      .split('\n')
+      .map((item) => item.trim())
+      .filter(Boolean);
+  };
+
+  const saveSkillToStorage = (skill) => {
+    if (typeof window === 'undefined') return;
+    const existing = localStorage.getItem(CUSTOM_SKILLS_KEY);
+    const parsed = existing ? JSON.parse(existing) : [];
+    parsed.push(skill);
+    localStorage.setItem(CUSTOM_SKILLS_KEY, JSON.stringify(parsed));
+    window.dispatchEvent(new Event('skill-added'));
+  };
+
   const handleSubmit = () => {
-    console.log('Skill submitted:', formData);
-    // Handle submission logic
+    const requiredFields = ['title', 'category', 'description', 'duration', 'format', 'schedule'];
+    const missingFields = requiredFields.filter((field) => !formData[field]?.trim());
+
+    if (missingFields.length) {
+      showToast({ message: 'Please complete all required fields before publishing.', type: 'error' });
+      return;
+    }
+
+    const newSkill = {
+      id: crypto.randomUUID(),
+      title: formData.title.trim(),
+      category: formData.category,
+      description: formData.description.trim(),
+      duration: formData.duration.trim(),
+      format: formData.format,
+      schedule: formData.schedule.trim(),
+      prerequisites: parseMultilineField(formData.prerequisites),
+      learningOutcomes: parseMultilineField(formData.learningOutcomes),
+      instructor: 'You',
+      rating: 5.0,
+      reviews: 0,
+      enrolled: 0,
+      createdAt: new Date().toISOString(),
+      isCustom: true
+    };
+
+    saveSkillToStorage(newSkill);
+    setFormData(initialFormState);
+    showToast({ message: 'Skill published! Redirecting you to Browse Skills...', type: 'success' });
+    setTimeout(() => {
+      Navigate('/skills');
+    }, 900);
   };
 
   return (
@@ -215,10 +266,7 @@ export default function PostSkillPage() {
                 Save as Draft
               </button>
               <button
-                onClick={() => {
-                    handleSubmit
-                    Navigate('/dashboard')
-                }}
+                onClick={handleSubmit}
                 className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 font-medium flex items-center space-x-2"
               >
                 <Save className="w-5 h-5" />
@@ -227,6 +275,8 @@ export default function PostSkillPage() {
             </div>
           </div>
         </div>
+
+        {toast && <Toast message={toast.message} type={toast.type} onClose={hideToast} />}
 
         {/* Tips Section */}
         <div className="mt-6 bg-blue-50 border border-blue-200 rounded-xl p-6">
