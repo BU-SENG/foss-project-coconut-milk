@@ -285,7 +285,6 @@ export default function ProfilePage() {
               )}
             </div>
 
-            {/* Skills Teaching */}
             <div className="bg-white rounded-xl shadow-sm p-6">
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-xl font-semibold text-gray-900">Skills Teaching</h3>
