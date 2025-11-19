@@ -111,7 +111,7 @@ export default function PostSkillPage() {
       </header>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Back Button */}
+        
         <button className="flex items-center space-x-2 text-gray-600 hover:text-blue-600 mb-6" onClick={() => {Navigate('/dashboard')}}>
           <ArrowLeft className="w-5 h-5" />
           <span>Back to Dashboard</span>
