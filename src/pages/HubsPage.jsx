@@ -73,7 +73,6 @@ const HubsPage = () => {
           </p>
         </div>
 
-        {/* Search and Filters */}
         <div className="grid md:grid-cols-4 gap-4 mb-8">
           <div className="md:col-span-3">
             <SearchBar 
@@ -88,7 +87,6 @@ const HubsPage = () => {
           />
         </div>
 
-        {/* Create Hub Button */}
         <div className="mb-6">
           <Link to="/create-hub">
             <Button variant="primary" icon="➕">
@@ -97,7 +95,6 @@ const HubsPage = () => {
           </Link>
         </div>
 
-        {/* Hubs Grid */}
         <div className="grid md:grid-cols-2 gap-6">
           {hubs.map((hub) => (
             <HubCard key={hub.id} {...hub} />

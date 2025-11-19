@@ -59,7 +59,7 @@ const HubDetailPage = () => {
   return (
     <DashboardLayout>
       <div className="max-w-7xl mx-auto">
-        {/* Hub Header */}
+        
         <Card variant="primary" className="mb-8">
           <div className="flex flex-col md:flex-row gap-6">
             <div className="w-32 h-32 rounded-2xl bg-secondary/10 flex items-center justify-center flex-shrink-0">
@@ -98,7 +98,7 @@ const HubDetailPage = () => {
         </Card>
 
         <div className="grid lg:grid-cols-3 gap-8">
-          {/* Sessions */}
+          
           <div className="lg:col-span-2">
             <div className="flex items-center justify-between mb-6">
               <h2 className="text-2xl font-bold text-secondary">Active Sessions</h2>
@@ -116,9 +116,7 @@ const HubDetailPage = () => {
             </div>
           </div>
 
-          {/* Sidebar */}
           <div className="space-y-6">
-            {/* Members */}
             <Card variant="primary">
               <h3 className="text-xl font-bold text-secondary mb-4">
                 Recent Members
@@ -141,7 +139,6 @@ const HubDetailPage = () => {
               </Button>
             </Card>
 
-            {/* Hub Stats */}
             <Card variant="accent">
               <h3 className="text-xl font-bold text-secondary mb-4">
                 Hub Activity
@@ -162,7 +159,6 @@ const HubDetailPage = () => {
               </div>
             </Card>
 
-            {/* Hub Rules */}
             <Card variant="primary">
               <h3 className="text-xl font-bold text-secondary mb-4">
                 Community Guidelines
