@@ -383,7 +383,7 @@ export default function ProfilePage() {
               )}
             </div>
 
-            {/* Account Settings */}
+            
             <div className="bg-white rounded-xl shadow-sm p-6">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Account Settings</h3>
               <div className="space-y-3">
