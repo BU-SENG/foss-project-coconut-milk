@@ -208,7 +208,7 @@ export default function BrowseSkills() {
           </p>
         </div>
 
-        {/* Skills Grid */}
+       
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredSkills.map(skill => (
             <div
