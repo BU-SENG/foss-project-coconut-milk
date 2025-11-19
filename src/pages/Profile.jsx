@@ -208,7 +208,7 @@ export default function ProfilePage() {
             </button>
           </div>
 
-          {/* Stats Grid */}
+         
           <div className="grid grid-cols-4 gap-4 py-6 border-t border-gray-200">
             <div className="text-center">
               <div className="text-3xl font-bold text-indigo-600 mb-1">{stats.skillsTaught}</div>
