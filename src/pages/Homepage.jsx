@@ -146,7 +146,7 @@ export default function LandingPage() {
 
       {/* Community Stories */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 grid lg:grid-cols-2 gap-12 items-center">
-        <div className="rounded-[32px] overflow-hidden shadow-2xl border border-white/70">
+        <div className="rounded-4xl overflow-hidden shadow-2xl border border-white/70">
           <img
             src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=1200&q=80"
             alt="Community session"
