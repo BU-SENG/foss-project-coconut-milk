@@ -145,7 +145,7 @@ export default function Dashboard() {
             </div>
           </div>
 
-          {/* Right Column - Upcoming & Activity */}
+         
           <div className="space-y-8">
             {/* Upcoming Sessions */}
             <div className="bg-white rounded-2xl shadow-lg p-6 border border-indigo-50">
