@@ -256,7 +256,7 @@ export default function BrowseSkills() {
           ))}
         </div>
 
-        {/* Empty State */}
+   
         {filteredSkills.length === 0 && (
           <div className="text-center py-12">
             <p className="text-gray-500 text-lg">No skills found matching your criteria</p>
