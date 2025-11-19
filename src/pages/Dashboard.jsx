@@ -161,7 +161,7 @@ export default function Dashboard() {
               </div>
             </div>
 
-            {/* Recent Activity */}
+         
             <div className="bg-white rounded-2xl shadow-lg p-6 border border-indigo-50">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Recent Activity</h3>
               <div className="space-y-4">
