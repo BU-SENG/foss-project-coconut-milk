@@ -34,7 +34,7 @@ export default function Dashboard() {
 
   return (
     <div className="min-h-screen bg-linear-to-br from-slate-50 via-indigo-50 to-purple-50">
-      {/* Header */}
+      
       <header className="bg-purple-600 text-white shadow-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
           <div className="flex items-center space-x-3">
@@ -72,7 +72,7 @@ export default function Dashboard() {
             </div>
           </div>
 
-        {/* Quick Actions */}
+        
         <div className="flex flex-wrap gap-4">
           <button
             className="bg-purple-600 text-white px-6 py-3 rounded-xl hover:opacity-90 font-medium inline-flex items-center space-x-2 shadow-lg"
@@ -94,11 +94,11 @@ export default function Dashboard() {
           </button>
         </div>
 
-        {/* Main Content Grid */}
+        
         <div className="grid lg:grid-cols-3 gap-8">
-          {/* Left Column - Skills */}
+          
           <div className="lg:col-span-2 space-y-8">
-            {/* Teaching Skills */}
+            
             <div className="bg-white rounded-2xl shadow-lg p-6 border border-indigo-50">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Skills You&apos;re Teaching</h3>
               <div className="space-y-4">
@@ -121,7 +121,7 @@ export default function Dashboard() {
               </div>
             </div>
 
-            {/* Learning Skills */}
+            
             <div className="bg-white rounded-2xl shadow-lg p-6 border border-indigo-50">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Skills You&apos;re Learning</h3>
               <div className="space-y-4">
@@ -145,9 +145,9 @@ export default function Dashboard() {
             </div>
           </div>
 
-          {/* Right Column - Upcoming & Activity */}
+          
           <div className="space-y-8">
-            {/* Upcoming Sessions */}
+            
             <div className="bg-white rounded-2xl shadow-lg p-6 border border-indigo-50">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Upcoming Sessions</h3>
               <div className="space-y-3">
@@ -161,7 +161,7 @@ export default function Dashboard() {
               </div>
             </div>
 
-            {/* Recent Activity */}
+           
             <div className="bg-white rounded-2xl shadow-lg p-6 border border-indigo-50">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Recent Activity</h3>
               <div className="space-y-4">
@@ -176,7 +176,7 @@ export default function Dashboard() {
           </div>
         </div>
 
-        {/* Inspiration Gallery */}
+        
         <section className="bg-white rounded-3xl shadow-2xl border border-indigo-50 p-8">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-8">
             <div>
