@@ -34,7 +34,6 @@ export default function Dashboard() {
 
   return (
     <div className="min-h-screen bg-linear-to-br from-slate-50 via-indigo-50 to-purple-50">
-      
       <header className="bg-purple-600 text-white shadow-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
           <div className="flex items-center space-x-3">
@@ -161,7 +160,7 @@ export default function Dashboard() {
               </div>
             </div>
 
-           
+            
             <div className="bg-white rounded-2xl shadow-lg p-6 border border-indigo-50">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Recent Activity</h3>
               <div className="space-y-4">

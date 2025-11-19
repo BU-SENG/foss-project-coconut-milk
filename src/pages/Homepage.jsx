@@ -65,6 +65,7 @@ export default function LandingPage() {
         </div>
       </header>
 
+      
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 grid lg:grid-cols-2 gap-12 items-center">
         <div>
           <p className="text-indigo-600 font-semibold uppercase tracking-wide mb-4">A community-first learning hub</p>
@@ -115,6 +116,7 @@ export default function LandingPage() {
         </div>
       </section>
 
+      
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <h3 className="text-3xl font-bold text-center text-gray-900 mb-12">How It Works</h3>
         <div className="grid md:grid-cols-3 gap-8">
@@ -142,6 +144,7 @@ export default function LandingPage() {
         </div>
       </section>
 
+      
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 grid lg:grid-cols-2 gap-12 items-center">
         <div className="rounded-4xl overflow-hidden shadow-2xl border border-white/70">
           <img
@@ -177,6 +180,7 @@ export default function LandingPage() {
         </div>
       </section>
 
+      
       <section className="bg-indigo-700 py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
           <p className="text-indigo-200 uppercase tracking-wider text-sm mb-4 text-center">Loved by creators</p>
@@ -195,6 +199,7 @@ export default function LandingPage() {
         </div>
       </section>
 
+      
       <section className="bg-linear-to-r from-indigo-600 to-purple-600 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-8 text-center text-white">
@@ -206,6 +211,7 @@ export default function LandingPage() {
         </div>
       </section>
 
+      
       <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="bg-white rounded-3xl shadow-2xl p-10 md:p-14 text-center border border-indigo-50">
           <p className="text-indigo-600 font-semibold uppercase tracking-wide mb-4">Ready when you are</p>
