@@ -201,7 +201,7 @@ export default function BrowseSkills() {
           </div>
         </div>
 
-        {/* Results Count */}
+      
         <div className="mb-4">
           <p className="text-gray-600">
             Showing <span className="font-semibold">{filteredSkills.length}</span> skills
