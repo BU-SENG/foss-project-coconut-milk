@@ -176,7 +176,7 @@ export default function Dashboard() {
           </div>
         </div>
 
-        {/* Inspiration Gallery */}
+    
         <section className="bg-white rounded-3xl shadow-2xl border border-indigo-50 p-8">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-8">
             <div>
