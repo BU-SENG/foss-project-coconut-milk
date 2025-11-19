@@ -83,7 +83,7 @@ export default function AuthPage() {
           </Link>
         </div>
 
-        {/* Toggle Buttons */}
+        
         <div className="flex bg-gray-100 rounded-lg p-1 mb-8">
           <button
             onClick={() => setIsLogin(true)}
