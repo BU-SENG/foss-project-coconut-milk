@@ -307,7 +307,7 @@ export default function ProfilePage() {
               </div>
             </div>
 
-            {/* Skills Learning */}
+          
             <div className="bg-white rounded-xl shadow-sm p-6">
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-xl font-semibold text-gray-900">Skills Learning</h3>
