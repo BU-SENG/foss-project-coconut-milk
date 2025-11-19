@@ -147,7 +147,7 @@ export default function Dashboard() {
 
          
           <div className="space-y-8">
-            {/* Upcoming Sessions */}
+           
             <div className="bg-white rounded-2xl shadow-lg p-6 border border-indigo-50">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Upcoming Sessions</h3>
               <div className="space-y-3">
