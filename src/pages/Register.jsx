@@ -203,7 +203,7 @@ export default function AuthPage() {
 
         {toast && <Toast message={toast.message} type={toast.type} onClose={hideToast} />}
 
-        {/* Divider */}
+       
         <div className="mt-6 text-center text-sm text-gray-600">
           {isLogin ? "Don't have an account?" : "Already have an account?"}{' '}
           <button
