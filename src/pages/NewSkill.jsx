@@ -94,7 +94,6 @@ export default function PostSkillPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Header */}
       <header className="bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
           <div className="flex items-center space-x-2">
@@ -111,21 +110,17 @@ export default function PostSkillPage() {
       </header>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Back Button */}
         <button className="flex items-center space-x-2 text-gray-600 hover:text-blue-600 mb-6" onClick={() => {Navigate('/dashboard')}}>
           <ArrowLeft className="w-5 h-5" />
           <span>Back to Dashboard</span>
         </button>
 
-        {/* Page Title */}
         <div className="mb-8">
           <h2 className="text-3xl font-bold text-gray-900 mb-2">Post a New Skill</h2>
           <p className="text-gray-600">Share your expertise with the community</p>
         </div>
 
-        {/* Form */}
         <div className="bg-white rounded-xl shadow-sm p-8 space-y-6">
-          {/* Skill Title */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
               Skill Title <span className="text-red-500">*</span>
@@ -140,7 +135,6 @@ export default function PostSkillPage() {
             />
           </div>
 
-          {/* Category */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
               Category <span className="text-red-500">*</span>
@@ -160,7 +154,6 @@ export default function PostSkillPage() {
             </select>
           </div>
 
-          {/* Description */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
               Description <span className="text-red-500">*</span>
@@ -176,7 +169,6 @@ export default function PostSkillPage() {
             <p className="text-sm text-gray-500 mt-1">Minimum 100 characters</p>
           </div>
 
-          {/* Duration */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
               Duration <span className="text-red-500">*</span>
@@ -191,7 +183,6 @@ export default function PostSkillPage() {
             />
           </div>
 
-          {/* Format */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
               Session Format <span className="text-red-500">*</span>
@@ -211,7 +202,6 @@ export default function PostSkillPage() {
             </select>
           </div>
 
-          {/* Schedule */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
               Schedule <span className="text-red-500">*</span>
@@ -226,7 +216,6 @@ export default function PostSkillPage() {
             />
           </div>
 
-          {/* Prerequisites */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
               Prerequisites (Optional)
@@ -241,7 +230,6 @@ export default function PostSkillPage() {
             />
           </div>
 
-          {/* Learning Outcomes */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
               Learning Outcomes (Optional)
@@ -256,7 +244,6 @@ export default function PostSkillPage() {
             />
           </div>
 
-          {/* Action Buttons */}
           <div className="flex items-center justify-between pt-6 border-t border-gray-200">
             <button className="text-gray-700 hover:text-red-600 font-medium" onClick={() => {Navigate('/dashboard')}}>
               Cancel
@@ -278,7 +265,6 @@ export default function PostSkillPage() {
 
         {toast && <Toast message={toast.message} type={toast.type} onClose={hideToast} />}
 
-        {/* Tips Section */}
         <div className="mt-6 bg-blue-50 border border-blue-200 rounded-xl p-6">
           <h3 className="font-semibold text-blue-900 mb-3">Tips for a Great Skill Post</h3>
           <ul className="space-y-2 text-sm text-blue-800">
