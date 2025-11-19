@@ -232,7 +232,7 @@ export default function ProfilePage() {
         <div className="grid lg:grid-cols-3 gap-8">
          
           <div className="lg:col-span-2 space-y-8">
-            {/* About Section */}
+           
             <div className="bg-white rounded-xl shadow-sm p-6">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">About</h3>
               {isEditing ? (
