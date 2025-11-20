@@ -103,9 +103,6 @@ export default function PostSkillPage() {
           </div>
           <div className="flex items-center space-x-4">
             <button className="text-gray-700 hover:text-blue-600 font-medium" onClick={() => {Navigate('/dashboard')}}>Dashboard</button>
-            <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-semibold">
-              JD
-            </div>
           </div>
         </div>
       </header>
