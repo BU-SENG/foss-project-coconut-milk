@@ -160,7 +160,7 @@ export default function ProfilePage() {
             <BookOpen className="h-8 w-8 text-indigo-600" />
             <h1 className="text-2xl font-bold text-gray-900">Skill Exchange Hub</h1>
           </div>
-          <button className="text-gray-700 hover:text-indigo-600 font-medium" onClick={() => Navigate('/dashboard')}>
+          <button className="text-gray-700 hover:text-indigo-600 font-medium px-4 py-2 rounded-ig transition-all duration-300 hover:rounded-full hover:bg-grey-100" onClick={() => Navigate('/dashboard')}>
             Back to Dashboard
           </button>
         </div>
@@ -190,7 +190,7 @@ export default function ProfilePage() {
             </div>
             <button
               onClick={handleEdit}
-              className="bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 font-medium flex items-center space-x-2"
+              className="bg-indigo-600 text-white px-6 py-2 rounded-lg transition-all duration-300 hover:rounded-full hover:bg-indigo-700 font-medium flex items-center space-x-2"
             >
               {isEditing ? (
                 <>
@@ -264,7 +264,7 @@ export default function ProfilePage() {
                   </div>
                   <button
                     onClick={handleCancel}
-                    className="text-gray-600 hover:text-gray-900 font-medium"
+                    className="text-gray-600 font-medium px-4  py-2 rounded-lg transition-all duration-300 hover:rounded-full hover:text-gray-900"
                   >
                     Cancel
                   </button>
@@ -380,25 +380,25 @@ export default function ProfilePage() {
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Account Settings</h3>
               <div className="space-y-3">
                 <button
-                  className="w-full text-left text-gray-700 hover:text-indigo-600 py-2"
+                  className="w-full text-left text-gray-700 py-2 rounded-lg transition-all duration-300 hover:rounded-full hover:bg-gray-100 hover:text-indigo-600"
                   onClick={() => Navigate('/settings/password')}
                 >
                   Change Password
                 </button>
                 <button
-                  className="w-full text-left text-gray-700 hover:text-indigo-600 py-2"
+                  className="w-full text-left text-gray-700 rounded-lg transition-all duration-300 hover:rounded-full hover:bg-gray-100 hover:text-indigo-600 py-2"
                   onClick={() => Navigate('/settings/notifications')}
                 >
                   Notification Preferences
                 </button>
                 <button
-                  className="w-full text-left text-gray-700 hover:text-indigo-600 py-2"
+                  className="w-full text-left text-gray-700 rounded-lg transition-all duration-300 hover:rounded-full hover:bg-gray-100 hover:text-indigo-600 py-2"
                   onClick={() => Navigate('/settings/privacy')}
                 >
                   Privacy Settings
                 </button>
                 <button
-                  className="w-full text-left text-red-600 hover:text-red-700 py-2 border-t border-gray-200 mt-2 pt-4"
+                  className="w-full text-left text-red-600 hover:text-red-700 py-2 border-t border-gray-200 mt-2 pt-4 rounded-lg transition-all duration-300 hover:rounded-full hover:bg-red-50"
                   onClick={() => Navigate('/settings/delete-account')}
                 >
                   Delete Account
